@@ -1,0 +1,18 @@
+1. Generate INPUTS with gen.py:
+    This script generate different input directories.
+    Customize:
+        N_INPUT_FOLDERS = 10    //Number of input folders   
+        N_INPUTS_MAX = 10000    //Maximum number of elements in array
+        n = 100                 //starting number of elements in array
+                                //More info in file
+    Run: python gen.py
+
+2. Send those INPUT files to existing Algorithms using the bash script input_read.command:
+    This script go threw every generated input and send it to every existing algorithm, after, creating the necessary Data.
+    It creates directories and subdirectories for every algorithm and probability with corresponding output folder for every given input folder.  
+    Customize:
+        PROBABILITY_VARIATION=0.1 //Incremental probability constant
+        PROBABILITY_MAX=0.95      //maximum probability value
+    Run: ./input_read.command
+
+3. Analyse and generate graphs with generated Data using graphs.py
